@@ -1,0 +1,29 @@
+{
+  "name": "leaflet-overview",
+  "version": "1.0",
+  "homepage": "https://github.com/NOtherDev/leaflet-overview",
+  "description": "Overview map for Leaflet that responds to base layer changes and allows hooking into overview map events",
+  "moduleType": [
+    "globals"
+  ],
+  "main": [
+    "src/leaflet-overview.css",
+    "src/leaflet-overview.js"
+  ],
+  "keywords": [
+    "leaflet",
+    "map",
+    "overview-map"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "leaflet": "~0.7.3"
+  }
+}

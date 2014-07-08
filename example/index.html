@@ -47,21 +47,8 @@
               'MapQuest Open': mqo
             }).addTo(map);
             
-            // We can't reuse the layers from the main map for the overview, so we
-            // need to create a second instance of each layer option
-            var osm2 = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-              name: 'osm',
-              attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            });
-            
-            var mqo2 = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
-              name: 'mapquest',
-              attribution: 'Tiles courtesy of <a href="http://www.mapquest.com/">MapQuest</a>',
-              subdomains: '1234'
-            });
-            
             // Add the overview control to the map
-            L.control.overview([osm2, mqo2]).addTo(map);
+            L.control.overview().addTo(map);
         </script>
     </body>
 </html>

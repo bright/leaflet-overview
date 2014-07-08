@@ -20,10 +20,10 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "example",
+    "README.md"
   ],
   "dependencies": {
-    "leaflet": "~0.7.3"
+    "leaflet-dist": "0.7.x"
   }
 }

@@ -7,13 +7,17 @@ L.Control.Overview = L.Control.extend({
   // must have a 'name' attribute
   // 
   // e.g. var osm = L.tileLayer('http://...', name: 'osm', attribution: ...)
-  initialize: function(layers) {
-    this._layers = layers;
-    this._currentBaseLayer = layers[0];
-  },
-  
   onAdd: function(map) {
     this._map = map;
+
+    for (var idx in map._layers) {
+      if (map._layers.hasOwnProperty(idx)) {
+        this._layers.push(new L.tileLayer(map._layers[idx]._url, {
+          name: map._layers[idx].name + '$overview$' + idx
+        }));
+      }
+    }
+
     this._initLayout();
     this._update();
         
@@ -45,7 +49,7 @@ L.Control.Overview = L.Control.extend({
     
     var rectangle = this._rectangle = new L.Rectangle(this._map.getBounds(), {weight: 2, clickable: false, color: '#4183c4'});
     overview.addLayer(rectangle);
-      
+
     setTimeout(function() { overview.invalidateSize(); });  // hack
   },
   
@@ -69,6 +73,6 @@ L.Control.Overview = L.Control.extend({
   }
 });
 
-L.control.overview = function(layer, options) {
-  return new L.Control.Overview(layer, options);
+L.control.overview = function(options) {
+  return new L.Control.Overview(options);
 };

@@ -6,6 +6,7 @@ L.Control.Overview = L.Control.extend({
   // e.g. var osm = L.tileLayer('http://...', name: 'osm', attribution: ...)
   onAdd: function(map) {
     this._map = map;
+    this._layers = [];
 
     for (var idx in map._layers) {
       if (map._layers.hasOwnProperty(idx)) {
@@ -14,6 +15,8 @@ L.Control.Overview = L.Control.extend({
         }));
       }
     }
+
+    this._currentBaseLayer = this._layers[0];
 
     this._initLayout();
     this._update();

@@ -58,7 +58,8 @@ L.Control.Overview = L.Control.extend({
   },
   
   _update: function() {
-    var center = this._map.getCenter(), zoom = Math.max(this._map.getZoom() - 4, 0);
+    var zoomDifference = this.options.zoomDifference || 4;
+    var center = this._map.getCenter(), zoom = Math.max(this._map.getZoom() - zoomDifference, 0);
     this._overview.setView(center, zoom);
     this._rectangle.setBounds(this._map.getBounds());
   },

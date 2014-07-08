@@ -1,8 +1,5 @@
 L.Control.Overview = L.Control.extend({
-  options: {
-    position: 'bottomright'
-  },
-  
+
   // In order to keep the overview map in sync with the main map, each layer
   // must have a 'name' attribute
   // 
@@ -49,6 +46,10 @@ L.Control.Overview = L.Control.extend({
     
     var rectangle = this._rectangle = new L.Rectangle(this._map.getBounds(), {weight: 2, clickable: false, color: '#4183c4'});
     overview.addLayer(rectangle);
+
+    if (typeof(this.options.onAfterInitLayout) == 'function') {
+      this.options.onAfterInitLayout(overview);
+    }
 
     setTimeout(function() { overview.invalidateSize(); });  // hack
   },

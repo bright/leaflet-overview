@@ -1,6 +1,6 @@
 {
   "name": "leaflet-overview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/NOtherDev/leaflet-overview",
   "description": "Overview map for Leaflet that responds to base layer changes and allows hooking into overview map events",
   "moduleType": [
@@ -24,6 +24,6 @@
     "README.md"
   ],
   "dependencies": {
-    "leaflet-dist": "0.7.x"
+    "leaflet": "0.7.x"
   }
 }

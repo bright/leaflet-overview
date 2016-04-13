@@ -1,8 +1,8 @@
 {
   "name": "leaflet-overview",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "homepage": "https://github.com/NOtherDev/leaflet-overview",
-  "description": "Overview map for Leaflet that responds to base layer changes and allows hooking into overview map events",
+  "description": "Overview map for Leaflet that inherits the layers from the main map and allows hooking into overview map events",
   "moduleType": [
     "globals"
   ],

@@ -1,5 +1,5 @@
 # L.Control.Overview
-Provides an overview map that responds to base layer changes.
+Provides an overview map that inherits the layers from the main map.
 
 Fork of [areichman/leaflet-overview](https://github.com/areichman/leaflet-overview) 
 that adds additional `onAfterInitLayout` hook that enables responding to overview map 

@@ -11,7 +11,7 @@ L.Control.Overview = L.Control.extend({
         for (var idx in map._layers) {
             if (map._layers.hasOwnProperty(idx)) {
                 var layer = map._layers[idx];
-                if (layer) {
+                if (layer._url) {
                     this._layers.push(new L.tileLayer(layer._url, {name: layer.name + '$overview$' + idx}));
                 }
             }

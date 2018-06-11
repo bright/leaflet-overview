@@ -1,0 +1,26 @@
+{
+  "name": "leaflet-overview",
+  "version": "1.1.2",
+  "homepage": "https://github.com/NOtherDev/leaflet-overview",
+  "description": "Overview map for Leaflet that inherits the layers from the main map and allows hooking into overview map events",
+  "moduleType": [
+    "globals"
+  ],
+  "main": "src/leaflet-overview.js",
+  "keywords": [
+    "leaflet",
+    "map",
+    "overview-map"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "example",
+    "README.md"
+  ],
+  "dependencies": {
+    "leaflet": "0.7.x"
+  }
+}
